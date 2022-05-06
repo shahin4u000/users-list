@@ -1,15 +1,16 @@
-<form class="example-form" [formGroup]="userForm"
-(ngSubmit)="onSubmit(userForm)" >
+<mat-card class="container">
+  <mat-card-title>update user details</mat-card-title>
+  <form #editForm="ngForm" class="example-form" [formGroup]="userForm" *ngIf="userForm"
+  (ngSubmit)="onSubmit(userForm)" >
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Leave a comment</mat-label>
+      <input matInput formControlName="name" placeholder="user name">
+    </mat-form-field>
 
-
-  <mat-form-field class="example-full-width" appearance="fill">
-    <mat-label>Leave a comment</mat-label>
-    <textarea matInput formControlName="name" placeholder="Ex. It makes me feel..."></textarea>
-  </mat-form-field>
-
-  <mat-form-field class="example-full-width" appearance="fill">
-    <mat-label>Leave a comment</mat-label>
-    <textarea matInput formControlName="email" placeholder="Ex. It makes me feel..."></textarea>
-  </mat-form-field>
-  <button mat-raised-button type="submit">Submit</button>
-</form>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Leave a comment</mat-label>
+      <input matInput formControlName="email" placeholder="user email">
+    </mat-form-field>
+    <button mat-raised-button color="primary" type="submit" [disabled]="">Submit</button>
+  </form>
+</mat-card>

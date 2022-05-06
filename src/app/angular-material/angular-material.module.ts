@@ -7,6 +7,9 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select';
 import {MatInputModule} from '@angular/material/input';
+import {MatCardModule} from '@angular/material/card';
+
+
 const materialModule = [
   MatTableModule,
   MatIconModule,
@@ -14,7 +17,8 @@ const materialModule = [
   MatButtonModule,
   MatFormFieldModule,
   MatSelectModule,
-  MatInputModule
+  MatInputModule,
+  MatCardModule
 ]
 @NgModule({
   declarations: [],
